@@ -18,7 +18,8 @@ include "../../../connect_e_health.php";
 	    </br></br>
    
    <h1>Datos del Paciente</h1>
-   <table class="table table-striped">
+   <div class="table responsive">
+   		<table class="table table-striped">
 		<tr>
 			<td>&nbsp;Número&nbsp;</td>
 			<td>&nbsp;Fecha&nbsp;</td>
@@ -40,6 +41,7 @@ include "../../../connect_e_health.php";
       ?>
    
    </table>
+   </div>
   </div>
 </body>
 </html>
