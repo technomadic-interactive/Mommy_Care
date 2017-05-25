@@ -18,7 +18,7 @@ include "../../../connect_e_health.php";
 	    </br></br>
    
    <h1>Datos del Paciente</h1>
-   <div class="table responsive">
+   <div class="table-responsive">
    		<table class="table table-striped">
 		<tr>
 			<td>&nbsp;Número&nbsp;</td>
