@@ -7,6 +7,11 @@
     $result=$link->query($peticion2);
     while($row = $result->cubrid_fetch_assoc()){
       echo $row["ID"];
+      echo $row["Fecha"];
+      echo $row["Temperatura"];
+      echo $row["Presion_sis"];
+      echo $row["Presion_dis"];
+      echo $row["Pulso"];
     }
    	$link->close();
 
