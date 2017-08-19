@@ -2,7 +2,7 @@
    	include "../../../connect_e_health.php";
    	
    	$link=db_Connection();
-    $peticion2="Select ID from paciente where ID=1";
+    $peticion2="Select ID from paciente where ID=1;";
 
     $result=$link->query($peticion2);
     while($row = $result->cubrid_fetch_assoc()){
