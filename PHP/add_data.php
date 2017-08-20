@@ -4,10 +4,23 @@
    	$link=db_Connection();
 
 	  $temperatura=$_POST["temperatura"];
-	  $presion_dis=mt_rand(68, 88);
-	  $presion_sis=mt_rand(100, 120);
-	  $pulso=$_POST["pulso"];
-      $fecha=date("l d-m-Y h:i:s a");
+	  $rand=mt_rand(1, 3);
+    switch ($rand){
+      case 1:
+        $presion_sis=115;
+        $presion_dis=75;
+        break;
+      case 2:
+        $presion_sis=110;
+        $presion_dis=60;
+        break;
+      case 3:
+        $presion_sis=120;
+        $presion_dis=80;
+        break;
+    }	  
+    $pulso=$_POST["pulso"];
+    $fecha=date("l d-m-Y h:i:s a");
 	  $peticion="INSERT INTO paciente VALUES (NULL, NULL, $temperatura, $presion_sis, $presion_dis, $pulso)";
 
     $link->query($peticion);
