@@ -29,27 +29,27 @@
       echo "temperatura \n";
 
     }
-    if ($pulso){
+    elseif ($pulso){
       echo "pulso \n";
       
     }
-    if ($glucosa){
+    elseif ($glucosa){
       echo "glucosa\n";
       
     }
-    if ($frecuencia_respiratoria){
+    elseif ($frecuencia_respiratoria){
       echo "frecuencia respiartoria\n";
       
     }
-    if ($contracciones){
+    elseif ($contracciones){
       echo "contracciones\n";
       
     }
-    if ($frecuencia_fetal){
+    elseif ($frecuencia_fetal){
       echo "frecuencia fetal\n";
       
     }
-    if (!$temperatura || !$pulso || !$glucosa || !$frecuencia_respiratoria || !$frecuencia_fetal || !$contracciones){
+    elseif (!$temperatura || !$pulso || !$glucosa || !$frecuencia_respiratoria || !$frecuencia_fetal || !$contracciones){
       echo "presion \n";
       
     }
