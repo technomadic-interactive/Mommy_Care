@@ -25,6 +25,34 @@
         $presion_dis=80;
         break;
     }	  
+    if ($temperatura){
+      echo "temperatura";
+
+    }
+    if ($pulso){
+      echo "pulso";
+      
+    }
+    if ($glucosa){
+      echo "glucosa";
+      
+    }
+    if ($frecuencia_respiratoria){
+      echo "frecuencia respiartoria";
+      
+    }
+    if ($contracciones){
+      echo "contracciones";
+      
+    }
+    if ($frecuencia_fetal){
+      echo "frecuencia fetal";
+      
+    }
+    if (!$temperatura || !$pulso || !$glucosa || !$frecuencia_respiratoria || !$frecuencia_fetal || !$contracciones){
+      echo "presion";
+      
+    }
     
     $fecha=date("l d-m-Y h:i:s a");
 	  $peticion="INSERT INTO pacientes VALUES (NULL, NULL, $temperatura, $presion_sis, $presion_dis, $pulso, $contracciones, $frecuencia_respiratoria, $glucosa, $frecuencia_fetal)";
