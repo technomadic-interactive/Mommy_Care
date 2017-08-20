@@ -5,6 +5,7 @@
 
 	  $temperatura=$_POST["temperatura"];
 	  $rand=mt_rand(1, 3);
+    echo $rand;
     switch ($rand){
       case 1:
         $presion_sis=115;
