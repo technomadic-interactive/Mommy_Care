@@ -60,15 +60,20 @@
     $link->query($peticion);
 
    	$link->close();
-    $send_data -> fecha = $fecha;
-    $send_data -> temperatura = $temperatura;
-    $send_data -> presion_distolica = $presion_dis;
-    $send_data -> presion_sistolica = $presion_sis;
-    $send_data -> pulso = $pulso;
-    $send_data -> contracciones = $contracciones;
-    $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria;
-    $send_data -> glucosa = $glucosa;
-    $send_data -> frecuencia_fetal = $frecuencia_fetal;
+    // $send_data -> fecha = $fecha;
+    // $send_data -> temperatura = $temperatura;
+    // $send_data -> presion_distolica = $presion_dis;
+    // $send_data -> presion_sistolica = $presion_sis;
+    // $send_data -> pulso = $pulso;
+    // $send_data -> contracciones = $contracciones;
+    // $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria;
+    // $send_data -> glucosa = $glucosa;
+    // $send_data -> frecuencia_fetal = $frecuencia_fetal;
+
+    $jsonString = file_get_contents('data.json');
+    $data = json_decode($jsonString, true);
+
+    $data[0]['temperatura'] = $temperatura;
 
     $myJSON = json_encode($send_data);
 
