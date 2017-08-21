@@ -73,7 +73,7 @@
     $jsonString = file_get_contents('data.json');
     $send_data = json_decode($jsonString, true);
 
-    $data[0]['temperatura'] = $temperatura;
+    $data[1]['temperatura'] = $temperatura;
 
     $myJSON = json_encode($send_data);
 
