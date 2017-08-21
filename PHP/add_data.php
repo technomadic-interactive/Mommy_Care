@@ -63,20 +63,20 @@
    	$link->close();
     
 
-    $send_data -> fecha = $fecha;
-    $send_data -> temperatura = $temperatura;
-    $send_data -> presion_distolica = $presion_dis;
-    $send_data -> presion_sistolica = $presion_sis;
-    $send_data -> pulso = $pulso;
-    $send_data -> contracciones = mt_rand(1, 3);
-    $send_data -> frecuencia_respiratoria = mt_rand(16, 25);
-    $send_data -> glucosa = mt_rand(70, 110);
-    $send_data -> frecuencia_fetal = mt_rand(110, 170);
+    // $send_data -> fecha = $fecha;
+    // $send_data -> temperatura = $temperatura;
+    // $send_data -> presion_distolica = $presion_dis;
+    // $send_data -> presion_sistolica = $presion_sis;
+    // $send_data -> pulso = $pulso;
+    // $send_data -> contracciones = mt_rand(1, 3);
+    // $send_data -> frecuencia_respiratoria = mt_rand(16, 25);
+    // $send_data -> glucosa = mt_rand(70, 110);
+    // $send_data -> frecuencia_fetal = mt_rand(110, 170);
 
-    // $jsonString = file_get_contents('data.json');
-    // $send_data = json_decode($jsonString, true);
+    $jsonString = file_get_contents('data.json');
+    $send_data = json_decode($jsonString, true);
 
-    // $send_data[0]['temperatura'] = $temperatura;
+    $send_data[1]['temperatura'] = $temperatura;
 
     $myJSON = json_encode($send_data);
 
