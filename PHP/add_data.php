@@ -81,9 +81,9 @@
     $myJSON = json_encode($send_data);
 
     $archivo = fopen("data.json", "w");
-    //fwrite($archivo, "[");
+    fwrite($archivo, "[");
     fwrite($archivo, $myJSON);
-    //fwrite($archivo, "]");
+    fwrite($archivo, "]");
     fclose($archivo);
 
    	header("Location: paciente.php");
