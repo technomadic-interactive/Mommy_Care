@@ -80,7 +80,7 @@
 
     $myJSON = json_encode($send_data);
 
-    $archivo = fopen("data.json", "w");
+    $archivo = fopen("data_prueba.json", "w");
     fwrite($archivo, "[");
     fwrite($archivo, $myJSON);
     fwrite($archivo, "]");
