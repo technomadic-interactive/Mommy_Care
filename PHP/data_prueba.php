@@ -95,6 +95,7 @@
     $archivo = fopen("data_prueba.json", "r");
     preg_match('temperatura', $archivo, $matches);
     print_r($matches); 
+    fclose($archivo);
    	header("Location: paciente.php");
 ?>
 
