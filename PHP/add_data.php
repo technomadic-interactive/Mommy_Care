@@ -13,6 +13,7 @@
     echo $rand;
     $json_string = file_get_contents('data.json')
     $datos=json_decode($json_string, true);
+    echo $temperatura;
     //$send_data -> fecha = $fecha;
     switch ($rand){
       case 1:
