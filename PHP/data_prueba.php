@@ -63,15 +63,42 @@
    	$link->close();
     
 
-    $send_data -> fecha = $fecha;
-    $send_data -> temperatura = $temperatura;
-    $send_data -> presion_distolica = $presion_dis;
-    $send_data -> presion_sistolica = $presion_sis;
-    $send_data -> pulso = $pulso;
-    $send_data -> contracciones = mt_rand(1, 3);
-    $send_data -> frecuencia_respiratoria = mt_rand(16, 25);
-    $send_data -> glucosa = mt_rand(70, 110);
-    $send_data -> frecuencia_fetal = mt_rand(110, 170);
+    // $send_data -> fecha = $fecha;
+    // $send_data -> temperatura = $temperatura;
+    // $send_data -> presion_distolica = $presion_dis;
+    // $send_data -> presion_sistolica = $presion_sis;
+    // $send_data -> pulso = $pulso;
+    // $send_data -> contracciones = mt_rand(1, 3);
+    // $send_data -> frecuencia_respiratoria = mt_rand(16, 25);
+    // $send_data -> glucosa = mt_rand(70, 110);
+    // $send_data -> frecuencia_fetal = mt_rand(110, 170);
+
+    $jsonString = file_get_contents('data.json');
+    $send_data = json_decode($jsonString, true);
+
+
+    function change_json_value($json = '', $old = '', $new = '') {
+
+      //Convert JSON to array:
+      $array = json_decode($json, TRUE);
+
+      //go trough every item :
+      foreach ($array as $key => $value) {
+        //if we find the key:
+        if ($value == $old) {
+            //change it:
+            $array[$key] = $new;
+            //Break the loop:
+            break;
+        }
+      }
+
+      //return new json:
+      return json_encode($array);
+    }
+
+
+
 
     // $jsonString = file_get_contents('data.json');
     // $send_data = json_decode($jsonString, true);
@@ -82,7 +109,7 @@
 
     $archivo = fopen("data_prueba.json", "w");
     fwrite($archivo, "[");
-    fwrite($archivo, $myJSON);
+    fwrite($archivo, change_json_value($send_data, '5', '4');
     fwrite($archivo, "]");
     fclose($archivo);
 
