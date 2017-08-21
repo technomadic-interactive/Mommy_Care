@@ -109,7 +109,7 @@
 
     $archivo = fopen("data_prueba.json", "w");
     fwrite($archivo, "[");
-    fwrite($archivo, change_json_value($send_data, '5', '4');
+    fwrite($archivo, change_json_value($send_data, '5', '4'));
     fwrite($archivo, "]");
     fclose($archivo);
 
