@@ -76,30 +76,7 @@
     // $jsonString = file_get_contents('data.json');
     // $send_data = json_decode($jsonString, true);
 
-
-    function change_json_value($json = '', $old = '', $new = '') {
-
-      //Convert JSON to array:
-      $array = json_decode($json, TRUE);
-
-      //go trough every item :
-      foreach ($array as $key => $value) {
-        //if we find the key:
-        if ($value == $old) {
-            //change it:
-            $array[$key] = $new;
-            //Break the loop:
-            break;
-        }
-      }
-
-      //return new json:
-      return json_encode($array);
-    }
-
-
-
-
+    preg_match('temperatura', $archivo);
     // $jsonString = file_get_contents('data.json');
     // $send_data = json_decode($jsonString, true);
 
@@ -114,6 +91,10 @@
     fwrite($archivo, "]");
     fclose($archivo);
 
+    
+    $archivo = fopen("data_prueba.json", "r");
+    preg_match('temperatura', $archivo, $matches);
+    echo matches[0];
    	header("Location: paciente.php");
 ?>
 
