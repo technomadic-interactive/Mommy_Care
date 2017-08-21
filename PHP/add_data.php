@@ -75,7 +75,7 @@
 
     $data[0]['temperatura'] = $temperatura;
 
-    $myJSON = json_encode($send_data);
+    $myJSON = json_encode($data);
 
     $archivo = fopen("data.json", "w");
     fwrite($archivo, "[");
