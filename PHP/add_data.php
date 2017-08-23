@@ -20,7 +20,7 @@
     echo $temperatura_json;
     echo "\n";
     echo $pulso_json;
-    fclose($archivo_json);
+    
     switch ($rand){
       case 1:
         $presion_sis=115;
