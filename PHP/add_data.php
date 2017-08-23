@@ -92,7 +92,7 @@
 
     $decod = json_decode($archivo_json);
     echo <pre>;
-    print_r("expression")
+    print_r($temperatura);
     echo <pre>;
     
 
