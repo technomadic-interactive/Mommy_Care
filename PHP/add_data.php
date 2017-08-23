@@ -91,6 +91,8 @@
     //var_dump($dat);
     $decod=json_decode($dat, true);
     var_dump($decod);
+    $temperatura_json=$decod[0]['temperatura'];
+    echo $temperatura;
     fclose($archivo_json);
 
     
