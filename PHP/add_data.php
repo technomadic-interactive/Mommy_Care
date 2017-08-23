@@ -11,6 +11,16 @@
     $frecuencia_fetal=$_POST["frecuencia_fetal"];
 	  $rand=mt_rand(1, 3);
     echo $rand;
+    $dat=file_get_contents('data.json');
+    //var_dump($dat);
+    $decod=json_decode($dat, true);
+    var_dump($decod);
+    $temperatura_json=$decod[0]['temperatura'];
+    $pulso_json=$decod[0]['pulso'];
+    echo $temperatura;
+    echo "\n";
+    echo $pulso;
+    fclose($archivo_json);
     switch ($rand){
       case 1:
         $presion_sis=115;
