@@ -86,17 +86,7 @@
     fwrite($archivo, "]");
     fclose($archivo);
 
-    echo "hola";
-
-    $archivo_json - fopen("data.json", "r");
-
-    $decod = json_decode($archivo_json);
-    echo <pre>;
-    print_r($temperatura);
-    echo <pre>;
     
-
-    fclose($archivo_json);
 
    	header("Location: paciente.php");
 ?>
