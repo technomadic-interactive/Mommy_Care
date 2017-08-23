@@ -87,9 +87,9 @@
     fclose($archivo);
 
     $archivo_json = fopen("data.json", "r");
-    $data_dson=file_get_contents($archivo_json):
+    $data_json=file_get_contents($archivo_json):
     fclose($archivo_json);
-    
+
     /*
 
 
