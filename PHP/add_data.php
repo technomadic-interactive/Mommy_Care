@@ -18,8 +18,7 @@
     $temperatura_json=$decod[0]['temperatura'];
     $pulso_json=$decod[0]['pulso'];
     echo $temperatura_json;
-    echo "\n";
-    echo $pulso_json;
+    
     
     switch ($rand){
       case 1:
