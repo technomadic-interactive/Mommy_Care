@@ -17,12 +17,12 @@
     //var_dump($decod);
     $temperatura_json=$decod[0]['temperatura'];
     $pulso_json=$decod[0]['pulso'];
-    $presion_dis_json=[0]['presion_distolica'];
-    $presion_sis_json=[0]['presion_sistolica'];
-    $contracciones_json=[0]['contracciones'];
-    $frecuencia_respiratoria_json=[0]['frecuencia_respiratoria'];
-    $glucosa_json=[0]['glucosa'];
-    $frecuencia_fetal_json=[0]['frecuencia_fetal'];
+    $presion_dis_json=$decod[0]['presion_distolica'];
+    $presion_sis_json=$decod[0]['presion_sistolica'];
+    $contracciones_json=$decod[0]['contracciones'];
+    $frecuencia_respiratoria_json=$decod[0]['frecuencia_respiratoria'];
+    $glucosa_json=$decod[0]['glucosa'];
+    $frecuencia_fetal_json=$decod[0]['frecuencia_fetal'];
     echo $temperatura_json;
     echo "\n";
     echo $pulso_json;
