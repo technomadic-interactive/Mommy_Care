@@ -90,7 +90,7 @@
 
 
    	$link->close();
-    
+    /*
     
     $send_data -> fecha = $fecha;
     $send_data -> temperatura = $temperatura;
@@ -127,7 +127,7 @@
     echo $pulso;
     fclose($archivo_json);
 
-    
+    */
 
 
     
