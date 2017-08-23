@@ -16,9 +16,11 @@
     $decod=json_decode($dat, true);
     var_dump($decod);
     $temperatura_json=$decod[0]['temperatura'];
-    //$pulso_json=$decod[0]['pulso'];
+    $pulso_json=$decod[0]['pulso'];
     echo $temperatura_json;
-    echo "/n";
+    echo "\n";
+    echo $pulso_json;
+    echo "\n";
     
     switch ($rand){
       case 1:
