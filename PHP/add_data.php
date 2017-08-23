@@ -17,9 +17,9 @@
     var_dump($decod);
     $temperatura_json=$decod[0]['temperatura'];
     $pulso_json=$decod[0]['pulso'];
-    echo $temperatura;
+    echo $temperatura_json;
     echo "\n";
-    echo $pulso;
+    echo $pulso_json;
     fclose($archivo_json);
     switch ($rand){
       case 1:
@@ -72,7 +72,7 @@
 
    	$link->close();
     
-
+    /*
     $send_data -> fecha = $fecha;
     $send_data -> temperatura = $temperatura;
     $send_data -> presion_distolica = $presion_dis;
@@ -106,7 +106,7 @@
     echo $temperatura;
     echo "\n";
     echo $pulso;
-    fclose($archivo_json);
+    fclose($archivo_json);*/
 
     
 
