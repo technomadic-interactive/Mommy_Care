@@ -90,8 +90,7 @@
     $dat=file_get_contents('data.json');
     //var_dump($dat);
     $decod=json_decode($dat, true);
-    $temperatura_json=$decod['temperatura'];
-    echo $temperatura_json;
+    var_dump($decod);
     fclose($archivo_json);
 
     
