@@ -86,7 +86,10 @@
     fwrite($archivo, "]");
     fclose($archivo);
 
-    $decod=json_decode($myJSON, true);
+    $archivo_json = fopen("data.json", "r");
+
+
+    $decod=json_decode($archivo_json, true);
     $temperatura_json=$decod['temperatura'];
     echo $temperatura_json;
 
