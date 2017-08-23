@@ -115,17 +115,7 @@
     fwrite($archivo, "]");
     fclose($archivo);
 
-    //$archivo_json = fopen("data.json", "r");
-    $dat=file_get_contents('data.json');
-    //var_dump($dat);
-    $decod=json_decode($dat, true);
-    var_dump($decod);
-    $temperatura_json=$decod[0]['temperatura'];
-    $pulso_json=$decod[0]['pulso'];
-    echo $temperatura;
-    echo "\n";
-    echo $pulso;
-    fclose($archivo_json);
+    
 
     
 
