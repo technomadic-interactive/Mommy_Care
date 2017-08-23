@@ -56,7 +56,7 @@
     }	  
     if ($temperatura){
       echo "temperatura \n";
-
+      $fecha=date("l d-m-Y h:i:s a");
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura;
       $send_data -> presion_distolica = $presion_dis_json;
@@ -106,7 +106,7 @@
       
     }
     
-    $fecha=date("l d-m-Y h:i:s a");
+    
 	  $peticion="INSERT INTO pacientes VALUES (NULL, NULL, $temperatura, $presion_sis, $presion_dis, $pulso, $contracciones, $frecuencia_respiratoria, $glucosa, $frecuencia_fetal)";
 
     $link->query($peticion);
