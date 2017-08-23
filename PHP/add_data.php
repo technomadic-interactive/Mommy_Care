@@ -87,6 +87,8 @@
     fclose($archivo);
 
     $archivo_json = fopen("data.json", "r");
+    echo file_get_contents($archivo_json):
+    
 
 
     $decod=json_decode($archivo_json, true);
