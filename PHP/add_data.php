@@ -88,7 +88,7 @@
 
     //$archivo_json = fopen("data.json", "r");
     $dat=file_get_contents('data.json');
-    var_dump($data_json);
+    var_dump($dat);
     fclose($archivo_json);
 
     /*
