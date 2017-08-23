@@ -9,6 +9,32 @@
     $frecuencia_respiratoria=$_POST["frecuencia_respiratoria"];
     $glucosa=$_POST["glucosa"];
     $frecuencia_fetal=$_POST["frecuencia_fetal"];
+
+    $fecha=date("l d-m-Y h:i:s a");
+    $send_data_prueba -> fecha = $fecha;
+    $send_data_prueba -> temperatura = $temperatura;
+    //$send_data -> presion_distolica = $presion;
+    //$send_data -> presion_sistolica = $presion;
+    $send_data_prueba -> pulso = $pulso;
+    $send_data_prueba -> contracciones = $contracciones;
+    $send_data_prueba -> frecuencia_respiratoria = $frecuencia_respiratoria;
+    $send_data_prueba -> glucosa = $glucosa;
+    $send_data_prueba -> frecuencia_fetal = $frecuencia_fetal;
+
+    // $jsonString = file_get_contents('data.json');
+    // $send_data = json_decode($jsonString, true);
+
+    // $send_data[0]['temperatura'] = $temperatura;
+
+    $myJSON = json_encode($send_data);
+
+    $archivo = fopen("data_prueba.json", "w");
+    fwrite($archivo, "[");
+    fwrite($archivo, $myJSON);
+    fwrite($archivo, "]");
+    fclose($archivo);
+
+
 	  $rand=mt_rand(1, 3);
     echo $rand;
     $dat=file_get_contents('data.json');
