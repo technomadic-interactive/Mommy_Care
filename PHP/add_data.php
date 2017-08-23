@@ -81,15 +81,15 @@
     $myJSON = json_encode($send_data);
 
     $archivo = fopen("data.json", "w");
-    //fwrite($archivo, "[");
+    fwrite($archivo, "[");
     fwrite($archivo, $myJSON);
-    //fwrite($archivo, "]");
+    fwrite($archivo, "]");
     fclose($archivo);
 
     //$archivo_json = fopen("data.json", "r");
-    $dat=file_get_contents('data.json'):
+    $dat=file_get_contents('data.json');
     var_dump($data_json);
-    //fclose($archivo_json);
+    fclose($archivo_json);
 
     /*
 
