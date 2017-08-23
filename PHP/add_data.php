@@ -90,18 +90,10 @@
 
     $archivo_json - fopen("data.json", "r");
 
-    $decod = json_decode($archivo_json, true);
-
+    $decod = json_decode($archivo_json);
+    print_r($decod);
     
-    var_dump($decod);
 
-    echo '<pre>' . print_r($decod, true) . '<pre>';
-
-    $temperatura_json = $decod[o]['temperatura'];
-
-
-
-    echo $temperatura_json;
     fclose($archivo_json);
 
    	header("Location: paciente.php");
