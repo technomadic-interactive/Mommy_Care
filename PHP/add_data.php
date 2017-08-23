@@ -89,7 +89,7 @@
     $archivo_json = fopen("data.json", "r");
     $data_dson=file_get_contents($archivo_json):
     fclose($archivo_json);
-    var_dump($data_dson);
+    
     /*
 
 
