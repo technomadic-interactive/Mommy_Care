@@ -91,6 +91,9 @@
     $archivo_json - fopen("data.json", "r");
 
     $decod = json_decode($archivo_json, true);
+
+    echo $decod;
+    
     echo '<pre>' . print_r($decod, true) . '<pre>';
 
     $temperatura_json = $decod[o]['temperatura'];
