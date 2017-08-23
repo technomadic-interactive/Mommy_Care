@@ -86,6 +86,17 @@
     fwrite($archivo, "]");
     fclose($archivo);
 
+    echo "hola";
+
+    $decod = json_decode($str, true);
+    echo '<pre>' . print_r($decod, true) . '<pre>';
+
+    $temperatura_json = $decod[o][temperatura];
+
+    
+
+    echo $temperatura_json;
+
    	header("Location: paciente.php");
 ?>
 
