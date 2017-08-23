@@ -92,7 +92,7 @@
 
     $decod = json_decode($archivo_json, true);
 
-    echo $decod;
+    
     var_dump($decod);
 
     echo '<pre>' . print_r($decod, true) . '<pre>';
