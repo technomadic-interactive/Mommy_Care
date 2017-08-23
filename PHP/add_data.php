@@ -91,7 +91,9 @@
     $archivo_json - fopen("data.json", "r");
 
     $decod = json_decode($archivo_json);
-    print_r($decod);
+    echo <pre>;
+    print_r("expression")
+    echo <pre>;
     
 
     fclose($archivo_json);
