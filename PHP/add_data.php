@@ -88,7 +88,9 @@
 
     echo "hola";
 
-    $decod = json_decode($str, true);
+    $archivo_json - fopen("data.json", "r");
+
+    $decod = json_decode($archivo_json, true);
     echo '<pre>' . print_r($decod, true) . '<pre>';
 
     $temperatura_json = $decod[o]['temperatura'];
