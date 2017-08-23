@@ -88,12 +88,12 @@
 
     $archivo_json = fopen("data.json", "r");
     echo file_get_contents($archivo_json):
-    
+    /*
 
 
     $decod=json_decode($archivo_json, true);
     $temperatura_json=$decod['temperatura'];
-    echo $temperatura_json;
+    echo $temperatura_json;*/
 
    	header("Location: paciente.php");
 ?>
