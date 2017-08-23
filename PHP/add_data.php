@@ -126,7 +126,7 @@
         fwrite($archivo, $myJSON);
         fwrite($archivo, "]");
         fclose($archivo);
-        
+
         break;
     }	  
     if ($temperatura){
@@ -242,7 +242,7 @@
     elseif ($contracciones){
       echo "contracciones\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $contracciones=mt_rand(70, 110);
+      $contracciones=mt_rand(1, 3);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
@@ -270,7 +270,7 @@
     elseif ($frecuencia_fetal){
       echo "frecuencia fetal\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $frecuencia_fetal=mt_rand(70, 110);
+      $frecuencia_fetal=mt_rand(110, 170);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
