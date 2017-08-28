@@ -9,6 +9,8 @@
     $frecuencia_respiratoria=$_POST["frecuencia_respiratoria"];
     $glucosa=$_POST["glucosa"];
     $frecuencia_fetal=$_POST["frecuencia_fetal"];
+    $presion_dis=$_POST["presion_dis"];
+    $presion_sis=$_POST["presion_sis"];
 
     $fecha=date("l d-m-Y h:i:s a");
     $send_data_prueba -> fecha = $fecha;
