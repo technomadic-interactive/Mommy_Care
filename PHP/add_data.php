@@ -67,7 +67,7 @@
     echo "\n";
     
     if ($presion_dis){
-      echo "temperatura \n";
+      echo "presion \n";
       $fecha=date("l d-m-Y h:i:s a");
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
