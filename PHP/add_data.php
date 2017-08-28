@@ -66,95 +66,34 @@
     echo $frecuencia_fetal_json;
     echo "\n";
     
-    switch ($rand){
-      case 1:
-        $presion_sis=115;
-        $presion_dis=75;
+    if ($presion_dis){
+      echo "temperatura \n";
+      $fecha=date("l d-m-Y h:i:s a");
+      $send_data -> fecha = $fecha;
+      $send_data -> temperatura = $temperatura_json;
+      $send_data -> presion_distolica = $presion_dis;
+      $send_data -> presion_sistolica = $presion_sis;
+      $send_data -> pulso = $pulso_json;
+      $send_data -> contracciones = $contracciones_json;
+      $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
+      $send_data -> glucosa = $glucosa_json;
+      $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
 
-        $fecha=date("l d-m-Y h:i:s a");
-        $send_data -> fecha = $fecha;
-        $send_data -> temperatura = $temperatura_json;
-        $send_data -> presion_distolica = $presion_dis;
-        $send_data -> presion_sistolica = $presion_sis;
-        $send_data -> pulso = $pulso_json;
-        $send_data -> contracciones = $contracciones_json;
-        $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
-        $send_data -> glucosa = $glucosa_json;
-        $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
+      // $jsonString = file_get_contents('data.json');
+      // $send_data = json_decode($jsonString, true);
 
-        // $jsonString = file_get_contents('data.json');
-        // $send_data = json_decode($jsonString, true);
+      // $send_data[0]['temperatura'] = $temperatura;
 
-        // $send_data[0]['temperatura'] = $temperatura;
+      $myJSON = json_encode($send_data);
 
-        $myJSON = json_encode($send_data);
+      $archivo = fopen("data.json", "w");
+      fwrite($archivo, "[");
+      fwrite($archivo, $myJSON);
+      fwrite($archivo, "]");
+      fclose($archivo);
 
-        $archivo = fopen("data.json", "w");
-        fwrite($archivo, "[");
-        fwrite($archivo, $myJSON);
-        fwrite($archivo, "]");
-        fclose($archivo);
+    }
 
-        break;
-      case 2:
-        $presion_sis=110;
-        $presion_dis=60;
-
-        $fecha=date("l d-m-Y h:i:s a");
-        $send_data -> fecha = $fecha;
-        $send_data -> temperatura = $temperatura_json;
-        $send_data -> presion_distolica = $presion_dis;
-        $send_data -> presion_sistolica = $presion_sis;
-        $send_data -> pulso = $pulso_json;
-        $send_data -> contracciones = $contracciones_json;
-        $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
-        $send_data -> glucosa = $glucosa_json;
-        $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
-
-        // $jsonString = file_get_contents('data.json');
-        // $send_data = json_decode($jsonString, true);
-
-        // $send_data[0]['temperatura'] = $temperatura;
-
-        $myJSON = json_encode($send_data);
-
-        $archivo = fopen("data.json", "w");
-        fwrite($archivo, "[");
-        fwrite($archivo, $myJSON);
-        fwrite($archivo, "]");
-        fclose($archivo);
-
-        break;
-      case 3:
-        $presion_sis=120;
-        $presion_dis=80;
-
-        $fecha=date("l d-m-Y h:i:s a");
-        $send_data -> fecha = $fecha;
-        $send_data -> temperatura = $temperatura_json;
-        $send_data -> presion_distolica = $presion_dis;
-        $send_data -> presion_sistolica = $presion_sis;
-        $send_data -> pulso = $pulso_json;
-        $send_data -> contracciones = $contracciones_json;
-        $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
-        $send_data -> glucosa = $glucosa_json;
-        $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
-
-        // $jsonString = file_get_contents('data.json');
-        // $send_data = json_decode($jsonString, true);
-
-        // $send_data[0]['temperatura'] = $temperatura;
-
-        $myJSON = json_encode($send_data);
-
-        $archivo = fopen("data.json", "w");
-        fwrite($archivo, "[");
-        fwrite($archivo, $myJSON);
-        fwrite($archivo, "]");
-        fclose($archivo);
-
-        break;
-    }	  
     if ($temperatura){
       echo "temperatura \n";
       $fecha=date("l d-m-Y h:i:s a");
