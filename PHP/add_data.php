@@ -212,7 +212,7 @@
     elseif ($glucosa){
       echo "glucosa\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $glucosa=mt_rand(70, 110);
+      //$glucosa=mt_rand(70, 110);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
@@ -240,7 +240,7 @@
     elseif ($frecuencia_respiratoria){
       echo "frecuencia respiartoria\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $frecuencia_respiratoria=mt_rand(16, 25);
+      //$frecuencia_respiratoria=mt_rand(16, 25);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
@@ -268,7 +268,7 @@
     elseif ($contracciones){
       echo "contracciones\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $contracciones=mt_rand(1, 3);
+      //$contracciones=mt_rand(1, 3);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
@@ -296,7 +296,7 @@
     elseif ($frecuencia_fetal){
       echo "frecuencia fetal\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $frecuencia_fetal=mt_rand(110, 170);
+      //$frecuencia_fetal=mt_rand(110, 170);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
