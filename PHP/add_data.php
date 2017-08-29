@@ -68,7 +68,7 @@
     echo $frecuencia_fetal_json;
     echo "\n";
     
-    if ($presion_dis){
+    if ($presion_dis || $presion_sis){
       echo "presion \n";
       $fecha=date("l d-m-Y h:i:s a");
       $send_data -> fecha = $fecha;
