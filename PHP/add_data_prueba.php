@@ -45,6 +45,7 @@
     echo "\n";
     echo "\n";
     echo "\n";
+    echo "hola";
     echo $frecuencia_respiratoria;
     
     switch ($rand){
