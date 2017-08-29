@@ -67,6 +67,8 @@
     echo "\n";
     echo $frecuencia_fetal_json;
     echo "\n";
+    echo "hola";
+    echo $frecuencia_respiratoria;
     
     if ($presion_dis || $presion_sis){
       echo "presion \n";
