@@ -41,6 +41,11 @@
     echo "\n";
     echo $frecuencia_fetal_json;
     echo "\n";
+    echo "\n";
+    echo "\n";
+    echo "\n";
+    echo "\n";
+    echo $frecuencia_respiratoria;
     
     switch ($rand){
       case 1:
