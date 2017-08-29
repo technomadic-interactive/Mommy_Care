@@ -167,7 +167,7 @@
       $send_data -> presion_sistolica = $presion_sis_json;
       $send_data -> pulso = $pulso;
       $send_data -> contracciones = $contracciones_json;
-      $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
+      $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria;
       $send_data -> glucosa = $glucosa_json;
       $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
 
@@ -216,7 +216,7 @@
     elseif ($frecuencia_respiratoria){
       echo "frecuencia respiartoria\n";
       $fecha=date("l d-m-Y h:i:s a");
-      $frecuencia_respiratoria=mt_rand(16, 25);
+      //$frecuencia_respiratoria=mt_rand(16, 25);
       $send_data -> fecha = $fecha;
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
