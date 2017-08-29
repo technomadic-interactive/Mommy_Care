@@ -132,7 +132,7 @@
       $send_data -> presion_sistolica = $presion_sis_json;
       $send_data -> pulso = $pulso;
       $send_data -> contracciones = $contracciones_json;
-      $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria_json;
+      $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria;
       $send_data -> glucosa = $glucosa_json;
       $send_data -> frecuencia_fetal = $frecuencia_fetal_json;
 
@@ -186,7 +186,7 @@
       $send_data -> temperatura = $temperatura_json;
       $send_data -> presion_distolica = $presion_dis_json;
       $send_data -> presion_sistolica = $presion_sis_json;
-      $send_data -> pulso = $pulso_json;
+      $send_data -> pulso = $pulso;
       $send_data -> contracciones = $contracciones_json;
       $send_data -> frecuencia_respiratoria = $frecuencia_respiratoria;
       $send_data -> glucosa = $glucosa_json;
