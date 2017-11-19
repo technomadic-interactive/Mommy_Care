@@ -8,6 +8,7 @@ include "../../../connect_e_health.php";
 <html>
    <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="refresh" content="3">
 
       <title>Info Paciente</title>
       <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
